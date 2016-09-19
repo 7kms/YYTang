@@ -1,16 +1,25 @@
+//每个项目单独的 build.gradle：针对每个moudle 的配置，如果这里的定义的选项和顶层build.gradle定义的相同，顶层的build.gradle被覆盖。典型的 配置内容如下：
+
+
+//apply plugin:第一行代码应用了Android 程序的gradle插件，作为Android 的应用程序，这一步是必须的，因为plugin中提供了Android 编译、测试、打包等等的所有task。
 apply plugin: 'com.android.application'
 
+//android:这是编译文件中最大的代码块，关于android 的所有特殊配置都在这里，这就是由我们前面的声明的 plugin 提供的
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
-
+    //defaultConfig就是程序的默认配置，注意，如果在AndroidMainfest.xml里面定义了与这里相同的属性，会以这里的为主。
     defaultConfig {
+        //是applicationId的选项：在我们曾经定义的AndroidManifest.xml中，那里定义的包名有两个用途：一个是作为程序的唯一识别ID,防止在同一手机装两个一样的程序；
+        // 另一个就是作为我们R资源类的包名。在以前我们修改这个ID会导致所有用引用R资源类的地方都要修改。但是现在我们如果修改applicationId只会修改当前程序的ID,
+        // 而不会去修改源码中资源文件的引用
         applicationId "com.example.tangliang.yytang"
         minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
+    //buildTypes:定义了编译类型，针对每个类型我们可以有不同的编译配置，不同的编译配置对应的有不同的编译命令。默认的有debug、release 的类型。
     buildTypes {
         release {
             minifyEnabled false
@@ -18,7 +27,7 @@ android {
         }
     }
 }
-
+//dependencies:是属于gradle 的依赖配置。它定义了当前项目需要依赖的其他库。
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'

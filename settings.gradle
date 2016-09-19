@@ -1,1 +1,2 @@
+//setting.gradle:这个 setting 文件定义了哪些module 应该被加入到编译过程
 include ':app'
