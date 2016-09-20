@@ -7,11 +7,11 @@ import android.os.SystemClock;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.ViewConfiguration;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.tangliang.yytang.R;
 
-public class waveButton extends Button{
+public class waveButton extends ImageButton{
 
     private static final int INVALIDATE_DURATION = 15;     //每次刷新的时间间隔
     private static int DIFFUSE_GAP = 10;                  //扩散半径增量
