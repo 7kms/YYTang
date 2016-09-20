@@ -33,7 +33,7 @@
         android:minLines="3"
         android:maxLines="3"
         />-->
-    <EditText
+    <!--<EditText
         android:id="@+id/testEditText"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -47,5 +47,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/testEditText"
         android:text="按钮"
+        />-->
+    <com.example.tangliang.yytang.components.EditTextWithDel
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="请输入文本"
+        android:textColorHint="#95A1AA"
         />
 </RelativeLayout>

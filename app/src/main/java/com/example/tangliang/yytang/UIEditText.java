@@ -22,7 +22,7 @@ public class UIEditText extends AppCompatActivity {
         editText.requestFocus();
         EditText editText1 = (EditText) findViewById(R.id.editText1);
         editText1.setSelectAllOnFocus(true);*/
-        button = (Button) findViewById(R.id.testEditTextButton);
+       /* button = (Button) findViewById(R.id.testEditTextButton);
         editText = (EditText) findViewById(R.id.testEditText);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,7 +35,6 @@ public class UIEditText extends AppCompatActivity {
                 int cursor = editText.getSelectionStart();
                 editText.getText().insert(cursor,spanStr);
             }
-        });
-
+        });*/
     }
 }
