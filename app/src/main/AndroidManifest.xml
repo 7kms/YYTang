@@ -9,12 +9,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".RunGirlActivity"></activity>
-        <activity android:name=".UITextActivity"></activity>
+        <activity android:name=".RunGirlActivity" />
+        <activity android:name=".UITextActivity" />
         <activity
             android:name=".UIEditText"
-            android:windowSoftInputMode="stateVisible"
-            >
+            android:windowSoftInputMode="stateVisible">
+        </activity>
+        <activity android:name=".UIButtonActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
